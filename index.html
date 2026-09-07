@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRAWL RANKER // Blind Tierlist</title>
+  <meta name="description" content="Rank Brawl Stars Brawler blind, einen nach dem anderen, auf Platz 1-10.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="scanlines"></div>
+  <div class="bg-grid"></div>
+
+  <header class="nav">
+    <a href="#top" class="nav-logo">BRAWL<span class="accent">RANKER</span></a>
+    <span class="nav-sub">// blind tierlist</span>
+  </header>
+
+  <main id="top">
+
+    <!-- START SCREEN -->
+    <section id="screen-start" class="screen hero">
+      <p class="hero-eyebrow">&gt; system.boot() // 106 brawler geladen</p>
+      <h1 class="hero-title" data-text="BRAWL RANKER">BRAWL RANKER</h1>
+      <p class="hero-sub">
+        Du siehst immer nur einen Brawler. Du entscheidest blind, auf welchen Platz er kommt.
+        Kein Zurück, keine zweite Chance. Nach 10 Brawlern ist deine Liste fertig.
+      </p>
+      <button class="btn btn-primary" id="btnStart">Runde starten</button>
+
+      <section class="history" id="historySection" hidden>
+        <h2 class="section-title"><span class="tag">LOG</span> Letzte Runden</h2>
+        <div class="history-list" id="historyList"></div>
+        <button class="btn btn-ghost btn-small" id="btnClearHistory">Verlauf löschen</button>
+      </section>
+    </section>
+
+    <!-- GAME SCREEN -->
+    <section id="screen-game" class="screen game" hidden>
+      <div class="game-progress">
+        <span id="progressLabel">Brawler 1 / 10</span>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <div class="game-layout">
+        <div class="brawler-card" id="brawlerCard">
+          <div class="brawler-frame" id="brawlerFrame">
+            <img id="brawlerImg" src="" alt="">
+          </div>
+          <h2 class="brawler-name" id="brawlerName">—</h2>
+          <span class="brawler-rarity" id="brawlerRarity">—</span>
+          <p class="game-hint">Wähle einen freien Platz &rarr;</p>
+        </div>
+
+        <ol class="slot-list" id="slotList"></ol>
+      </div>
+    </section>
+
+    <!-- RESULT SCREEN -->
+    <section id="screen-result" class="screen result" hidden>
+      <h2 class="section-title"><span class="tag">FIN</span> Deine Tierlist</h2>
+      <ol class="result-list" id="resultList"></ol>
+      <button class="btn btn-primary" id="btnAgain">Neue Runde</button>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> BRAWL RANKER — Brawler-Daten &amp; Bilder via <a href="https://brawlify.com" target="_blank" rel="noopener">Brawlify</a>. Kein offizielles Supercell-Produkt.</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
